@@ -149,7 +149,6 @@ span{
   cursor: pointer;
 }
 .container-nested{
-  margin-top:10rem;
   display:flex;
   justify-content:center;
   flex-direction: column;
@@ -174,7 +173,7 @@ span{
 .titles p{
   color: black;
   font-size: 16px;
-  padding:10px;
+  margin-left: 10px;
   width:50rem;
 }
 .items{
@@ -184,4 +183,40 @@ span{
 }
 .items h4{
   font-weight: bold;
+}
+.about{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width:51rem;
+  height:50px;
+  cursor: pointer;
+  border: 1px solid rgb(209, 209, 209);
+}
+.btn-toggle{
+  display:flex;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 34.15rem;
+  margin-top: 100px;;
+  width:50.75rem;
+  height:70px;
+  padding:5px;
+  cursor: pointer;
+  border: 1px solid rgb(209, 209, 209);
+}
+.inside-button{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 25px;
+  text-align: left;
+}
+.App img{
+  margin-left: 20px;
+  width:30px;
+  height:30px;
+}
+.arrow{
+  margin-left: 35rem;
 }
