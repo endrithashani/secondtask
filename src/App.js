@@ -16,7 +16,7 @@ function App() {
     <p>4 articles in this Topic</p>
     </div>
     <div className="arrow">
-    <p>⮟</p>
+    <p>˅</p>
     </div>
     </button>
     {openToggle && <NestedToggle closeToggle={setOpenToggle}/>}
