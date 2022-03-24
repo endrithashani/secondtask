@@ -238,6 +238,10 @@ span{
 .arrow{
   margin-right: 10px;
 }
+.arrow p{
+  font-weight: bold;
+  font-size: 18px;
+}
 .App{
   display: flex;
   flex-direction: column;
