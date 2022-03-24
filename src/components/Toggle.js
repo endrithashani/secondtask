@@ -2,15 +2,15 @@ import { useState } from "react";
 function Toggle() {
   const[selected,setSelected]=useState(null);
   const toggle = (i) =>{
-    if(selected == i){
+    if(selected === i){
       return setSelected(null)
     }
 
     setSelected(i)
   }
   return (
+    <div className="cont-toggle">
     <div className="toggle-container">  
-    <div className="toggle">
     {data.map((card , i)=>{
       const{content,title}=card;
       return(
