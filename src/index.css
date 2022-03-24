@@ -1,100 +1,253 @@
-body.active-modal {
-  overflow-y: hidden;
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
 }
 
-.btn-modal {
-  padding: 10px 20px;
-  display: block;
-  margin: 100px auto 0;
-  font-size: 18px;
-  width:150px;
-  background-color: #2072EF;
-  border: none;
-  border-radius: 5px;
-  color: white;
+body {
+  background: #fff;
 }
 
-.modal, .overlay {
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: fixed;
-  display:flex;
-}
-.overlay {
-  background: rgba(49,49,49,0.8);
-}
-.modal-content {
-  display:flex;
+ .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  line-height: 1.4;
-  background: #f1f1f1;
-  padding: 14px 28px;
-  border-radius: 5px;
-  width:75%;
+} 
+
+.bloc-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+
 }
-.upper{
+.tabs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: 1;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 60px;
+  outline: none;
+  cursor: pointer;
+}
+button {
+  border: none;
+  width: 3rem;
+  background-color: white;
+  
+}
+.content-tabs {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.content {
+  background: white;
+  padding: 20px;
+  display: none;
+}
+.content h2 {
+  padding: 0px 0 5px 0px;
+}
+.content hr {
+  width: 100px;
+  height: 2px;
+  background: #222;
+  margin-bottom: 5px;
+}
+.content p {
+  width: 100%;
+  height: 100%;
+}
+.active-content {
+  display: block;
+}
+.after-active{
   display:flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: center;
+  align-items: center; */
+}
+.after-display{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
   align-items: center;
-}
-.main{
-  display:flex;
-  justify-content: space-between;
-  border-bottom: 1px solid rgb(219, 219, 219);
-}
-.inside-main{
-  display:flex;
-  flex-direction:row;
-  align-items: center;
-}
-.color{
-  width:70px;
-  height:25px;
-  border-radius: 5px;
+  text-align: center;
+  flex-wrap: 1;
   box-sizing: border-box;
-  margin-left: 10px;
-  background-color: yellow;
+  border:1px solid whitesmoke;
+  border-radius: 1rem;
+  width: 320px;
+  margin: 15px;
 }
-.close-modal{
-  width:100px;
-  height:40px;
-  border: none;
-  border: 1px solid rgb(219, 219, 219);
+.buy{
   border-radius: 5px;
-  background-color: white;
+  width:14rem;
+  height:2.5rem;
+  background-color: white; 
+  border:none;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border:1px solid rgb(67, 120, 218);
+  color: rgb(67, 120, 218);
 }
-.save{
-  width:100px;
-  height:40px;
-  border: none;
-  border: 1px solid rgb(219, 219, 219);
-  border-radius: 5px;
-  background-color: #2072EF;
-  margin-left: 30px;
-  color: white;
+.react-tabs__tab--selected{
+  border-bottom: 1px solid blue;
+}
+.after-display h2{
+margin-top: 3rem;
+}
+.after-display h3{
+  margin-top: 2.5rem;
+}
+.toggle-container{
+  display:flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 90%;
 }
 .content{
-  margin-top: 10px;
   display:flex;
-  flex-direction:column;
+  justify-content: space-between;
+  cursor: pointer;
 }
-.buttons{
+.item{
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  margin-top: 40px;
+  border-radius: 5px;
+  border: 1px solid rgb(209, 209, 209);
+
 }
-.upper a{
-  text-decoration: none;
-  color: #2072EF;
+.title{
+  overflow: hidden;
+  display:none;
+}
+.title.show{
+  display:block;  
+  border-top: 1px solid rgb(209, 209, 209);
+  width:98.8%;
+}
+
+span{
+  font-size: 16px;
+  font-weight: bold;
+}
+.title p{
+  color: gray;
+  margin:30px;
+}
+.cont-toggle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.contents{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.contents h4{
+  margin-left: 10px;
+}
+.contents span{
+  margin-right: 10px;
+}
+.container-nested{
+  display:flex;
+  justify-content:center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 80%;
+}
+.opened{
+  display:flex;
+  width:100%;
+  cursor: pointer;
+  border: 1px solid rgb(209, 209, 209);
+  height:4rem;
+}
+.titles{
+  overflow: hidden;
+  display:none;
+}
+.titles.show{
+  width: 100%;
+  display: block;
+}
+.titles p{
+  color: black;
+  font-size: 16px;
+  margin-left: 10px;
+}
+.items{
+  width: 100%;
+  border-bottom:1px solid rgb(209, 209, 209);
+  border-right:1px solid rgb(209, 209, 209);
+  border-left:1px solid rgb(209, 209, 209);
+}
+.items h4{
+  font-weight: bold;
+}
+.about{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width:51rem;
+  height:50px;
+  cursor: pointer;
+  border: 1px solid rgb(209, 209, 209);
+}
+.btn-toggle{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 100px;;
+  width:80%;
+  cursor: pointer;
+  border: 1px solid rgb(209, 209, 209);
+}
+.inside-button{
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  text-align: left;
+  margin: 10px;
+}
+.App img{
+  margin-left: 20px;
+  width:30px;
+  height:30px;
+}
+.arrow{
+  margin-right: 10px;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nested-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
